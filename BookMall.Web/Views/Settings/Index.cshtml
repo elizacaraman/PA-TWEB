@@ -1,0 +1,197 @@
+﻿@using System.Web.Optimization
+@model BookMall.Web.Models.UserSettings
+
+<div class="container pt-4">
+    <div class="row flex-lg-nowrap">
+
+        <div class="col-12 col-lg-auto mb-3" style="width: 200px;">
+            <div class="card p-3 border-primary">
+                <div class="e-navlist e-navlist--active-bg">
+                    <ul class="nav d-block ">
+                        <li class="nav-item">
+                            <a class="text-decoration-none" href="/profile">
+                                Overview
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-decoration-none" href="#">
+                                Settings
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="row">
+                <div class="col mb-3">
+                    <div class="card border-primary">
+                        <div class="card-body">
+                            <div class="e-profile">
+                                <div class="row">
+                                    <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
+                                        <div class="text-center text-sm-left mb-2 mb-sm-0">
+                                            <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">
+                                                @ViewBag.Username
+                                            </h4>
+                                        </div>
+                                        <div class="text-center text-sm-right">
+                                            <span class="badge bg-primary">
+                                                @ViewBag.UserLevel
+                                            </span>
+                                            <div class="text-muted"><small>Joined @ViewBag.FirstLogin</small></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item"><a href="/profile" class="nav-link">Profile</a></li>
+                                    <li class="nav-item"><a href="" class="active nav-link">Settings</a></li>
+                                </ul>
+                                <div class="tab-content pt-3">
+                                    <div class="tab-pane active">
+                                            @Html.ValidationSummary(true)
+                                            @using (Html.BeginForm("Index", "Settings", FormMethod.Post, new { @id = "SettingsForm" }))
+                                            {
+                                                    @Html.AntiForgeryToken()
+
+                                                    @Html.HiddenFor(m => m.Id)
+                                                    @Html.HiddenFor(m => m.Privilege)
+                                                    <div class="form-group">
+                                                        @Html.LabelFor(m => m.Username, new { @class = "control-label" })
+                                                        @Html.TextBoxFor(m => m.Username, new
+                                                   {
+                                                       placeholder = "Joe Doe",
+                                                       title = "Please enter you username",
+                                                       value = "",
+                                                       name = "username",
+                                                       id = "username",
+                                                       @class = "form-control"
+                                                   })
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        @Html.LabelFor(m => m.Email, new { @class = "control-label" })
+                                                        @Html.TextBoxFor(m => m.Email, new
+                                                   {
+                                                       placeholder = "example@gmail.com",
+                                                       title = "Please enter you email",
+                                                       value = "",
+                                                       name = "email",
+                                                       id = "email",
+                                                       @class = "form-control"
+                                                   })
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="control-label" for="CurrentPassword">Current Password</label>
+                                                        @Html.TextBoxFor(m => m.CurrentPassword, new
+                                                   {
+                                                       @class = "form-control",
+                                                       type = "password",
+                                                       title = "Please enter your password",
+                                                       placeholder = "******",
+                                                       value = "",
+                                                       name = "password1",
+                                                       id = "password1"
+                                                   })
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="control-label" for="Password1">New Password</label>
+                                                        @Html.TextBoxFor(m => m.Password1, new
+                                                   {
+                                                       @class = "form-control",
+                                                       type = "password",
+                                                       title = "Please enter your password",
+                                                       placeholder = "******",
+                                                       value = "",
+                                                       name = "password1",
+                                                       id = "password1"
+                                                   })
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="control-label" for="Password2">Confirm Password</label>
+                                                        @Html.TextBoxFor(m => m.Password2, new
+                                                   {
+                                                       @class = "form-control",
+                                                       type = "password",
+                                                       title = "Please repeat your password",
+                                                       placeholder = "******",
+                                                       value = "",
+                                                       name = "password2",
+                                                       id = "password2"
+                                                   })
+                                                    </div>
+
+                                                    <div class="col d-flex justify-content-end">
+                                                        <button class="btn btn-primary" type="submit">Save Changes</button>
+                                                    </div>
+
+                                            }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-3 mb-3">
+                    <div class="card mb-3 border-primary">
+                        <div class="card-body">
+                            <div class="px-xl-3">
+                                <button class="btn btn-block btn-secondary">
+                                    <i class="fa fa-sign-out"></i>
+                                    <span>Logout</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-primary">
+                        <div class="card-body">
+                            <h6 class="card-title font-weight-bold">Support</h6>
+                            <p class="card-text">Get fast, free help from our friendly assistants.</p>
+                            <button type="button" class="btn btn-primary">Contact Us</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/validation/js")
+
+    <script type="text/javascript">
+        $(function () {
+
+            $("#SettingsForm").validate({
+                rules: {
+                    Username: {
+                        required: false
+                    },
+                    CurentPassword: {
+                        required: false
+                    }
+                },
+                submitHandler: function (form) {
+                    form.submit();
+                },
+                errorPlacement: function (error, element) {
+                    $(element)
+                        .closest("form")
+                        .find("label[for='" + element.attr("id") + "']")
+                        .append(error);
+                },
+                errorElement: "span"
+            });
+        });
+
+
+    </script>
+}

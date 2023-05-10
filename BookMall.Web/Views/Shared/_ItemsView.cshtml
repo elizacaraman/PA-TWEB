@@ -1,0 +1,45 @@
+﻿
+<section>
+
+    <div class="container py-5">
+        <p class="mx-5">
+            @Html.Partial("_Categories")
+        </p>
+        <div class="row">
+            @Html.Partial("_Pagination")
+        </div>
+        <div class="row">
+            @foreach (var book in Model)
+            {
+                <div class="col-lg-2 col-md-3 col-6 ">
+
+                    <div class="card border-primary bg-dark mb-3 text-center">
+                        <div class="card-footer text-muted">
+                            @if (book.ImageUrl == null || book.ImageUrl.Length < 1)
+                            {
+                                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fbooktrapper.com%2Fassets%2Fbook_placeholder-406203b0e6780be8153818c65f7d80061f62079d907f33fc092c2434cdf8e954.png&f=1&nofb=1" class="card-img-top img-thumbnail" alt="Book" />
+                            }
+                            else
+                            {
+                                <img src="@Url.Content(book.ImageUrl)" class="card-img-top img-thumbnail" alt="Book" />
+                            }
+
+
+                            <smalla>
+                                <p class="item_text">
+                                    @book.Title : @book.Author
+                                </p>
+                            </smalla>
+                            <p>@book.Price $</p>
+                            <a href="/book/display/@book.Id" class="text-dark stretched-link text-decoration-none"> </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="row">
+            @Html.Partial("_Pagination")
+        </div>
+    </div>
+</section>
