@@ -15,11 +15,11 @@ namespace BookMall.Web.Controllers
         {
             var bookmall = new LearnMore
             {
-                Title = "Book Haven",
-                Description = "Book Haven este un magazin online de carte, cu livrare gratuita in toata tara",
-                Address = "123 Main St, Anytown USA",
-                PhoneNumber = "(123) 456-7890",
-                EmailAddress = "info@bookhaven.com"
+                Title = "BookMall",
+                Description = "BookMall is an online bookstore that offers free shipping across the country.",
+                Address = "str.Mihai Eminescu 42",
+                PhoneNumber = "(373) 456-7890",
+                EmailAddress = "bookm9837@gmail.com"
             };
 
             //return RedirectToAction("Index", "Details");

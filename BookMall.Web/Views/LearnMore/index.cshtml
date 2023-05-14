@@ -4,14 +4,33 @@
     ViewBag.Title = "Learn More";
 }
 
-<div class="container">
-    <h2>@Model.Title</h2>
-    <p>@Model.Description</p>
-    <ul>
-        <li>Address: @Model.Address</li>
-        <li>Phone: @Model.PhoneNumber</li>
-        <li>Email: @Model.EmailAddress</li>
-    </ul>
+<div class="container" style="display: flex; align-items: center; justify-content: space-between;">
+    <div style="flex-basis: 60%;">
+        <h2>@Model.Title</h2>
+        <p>@Model.Description</p>
+        <ul style="list-style: none; padding: 0; margin: 0;">
+            <li><strong>Address:</strong> @Model.Address</li>
+            <li><strong>Phone:</strong> @Model.PhoneNumber</li>
+            <li><strong>Email:</strong> @Model.EmailAddress</li>
+        </ul>
+        <h3>About BookMall</h3>
+        <p>
+            BookMall is an established online bookstore that has been catering to the needs of book enthusiasts for over ten years. We pride ourselves on offering a diverse and extensive collection of books, ranging from popular bestsellers to hard-to-find rare editions. Our inventory includes textbooks for students, as well as literature, non-fiction, and reference books for readers of all ages and interests.
 
-    <a href="/" class="btn btn-primary">Visit Website</a>
+            At BookMall, we are committed to providing quality service to our customers. Our website is user-friendly and easy to navigate, allowing customers to quickly search and find the books they are looking for. We offer competitive prices on all our books and strive to provide the best value for our customers.
+
+            In addition to our extensive selection and competitive prices, we also offer fast and reliable shipping. We use trusted shipping partners to ensure that our customers receive their orders in a timely and secure manner.
+
+            At BookMall, we believe in the power of books to inspire and enrich our lives. That's why we are passionate about making books accessible to everyone, and we are committed to supporting literacy and education initiatives in our community.
+
+            Whether you are a student, a professional, or a lifelong reader, BookMall has something for you. Shop with us today and discover the joy of reading!
+        </p>
+        <h3>Our Website</h3>
+        <p>Our website is designed to make shopping for books easy and enjoyable. You can browse by category or search for specific titles or authors. We offer fast and affordable shipping options, as well as convenient payment methods. Our website is secure and user-friendly, so you can shop with confidence.</p>
+        <a href="@Url.Action("Index", "Home")" class="btn btn-primary">Visit BookMall</a>
+    </div>
+    <div style="flex-basis: 35%;">
+        <img src="~/Content/images/imag1.jpg" alt="Bookshelf" style="width: 100%; margin-bottom: 20px;">
+        <img src="~/Content/images/imag2.jpg" alt="Bookstore" style="width: 100%;">
+    </div>
 </div>
