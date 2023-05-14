@@ -1,0 +1,17 @@
+@model BookMall.Web.Models.LearnMore
+
+@{
+    ViewBag.Title = "Learn More";
+}
+
+<div class="container">
+    <h2>@Model.Title</h2>
+    <p>@Model.Description</p>
+    <ul>
+        <li>Address: @Model.Address</li>
+        <li>Phone: @Model.PhoneNumber</li>
+        <li>Email: @Model.EmailAddress</li>
+    </ul>
+
+    <a href="/" class="btn btn-primary">Visit Website</a>
+</div>

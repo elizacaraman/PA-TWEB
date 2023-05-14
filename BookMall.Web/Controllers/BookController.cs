@@ -81,6 +81,7 @@ namespace BookMall.Web.Controllers
                         fileName = BitConverter.ToString(md5.ComputeHash(file.InputStream)).Replace("-", "");
                         book.ImageUrl = "~/Content/Covers/" + fileName + ".jpg";
                         book.PdfUrl = "~/Content/Books/" + fileName + fi.Extension;
+
                         book.PdfFile = Path.Combine(Server.MapPath("~/Content/Books/"), fileName + fi.Extension);
                         book.JpgFile = Path.Combine(Server.MapPath("~/Content/Covers/"), fileName + ".jpg");
                         if (!System.IO.File.Exists(book.PdfFile))

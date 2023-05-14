@@ -1,0 +1,73 @@
+@using System.Web.Optimization
+@model BookMall.Web.Models.Contacts
+
+
+
+<div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+            <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                <div class="card-body p-6">
+                    <h3 class="mb-6 text-center">Contact Us</h3>
+                    @Html.ValidationSummary(true)
+                    @using (Html.BeginForm("Index", "Contacts", FormMethod.Post, new { @id = "ContactsForm" }))
+                    {
+                        // @using (Html.BeginForm("Contact", "Home", FormMethod.Post))
+                        {
+                            @Html.AntiForgeryToken()
+
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Name, new { @class = "control-label" })
+                                @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "Your name", required = "required" })
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Email, new { @class = "control-label" })
+                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Your email", type = "email", required = "required" })
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Message, new { @class = "control-label" })
+                                @Html.TextAreaFor(m => m.Message, new { @class = "form-control", rows = "5", placeholder = "Your message", required = "required" })
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Send message</button>
+                        }
+
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        $(function () {
+            $("#contact-form").validate({
+                rules: {
+                    name: {
+                        required: true
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    message: {
+                        required: true
+                    }
+                },
+                submitHandler: function (form) {
+                    form.submit();
+                },
+                errorPlacement: function (error, element) {
+                    $(element)
+                        .closest("form")
+                        .find("label[for='" + element.attr("id") + "']")
+                        .append(error);
+                },
+                errorElement: "span"
+            });
+        });
+    </script>
+}

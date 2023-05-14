@@ -12,7 +12,7 @@ namespace BookMall.Web.Controllers
 {
     public class SignupController : BaseController
     {
-        private readonly ISession _session;
+        private readonly BuisnessLogic.Interfaces.ISession _session;
         public SignupController()
         {
             var bl = new BuissnesLogic();

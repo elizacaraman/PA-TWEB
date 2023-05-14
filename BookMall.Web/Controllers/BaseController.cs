@@ -13,7 +13,7 @@ namespace BookMall.Web.Controllers
 {
     public class BaseController : Controller
     {
-        public readonly ISession _session;
+        public readonly BuisnessLogic.Interfaces.ISession _session;
         // GET: Base
         public BaseController()
         {

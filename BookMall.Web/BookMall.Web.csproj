@@ -321,6 +321,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Controllers\ContactsController.cs" />
+    <Compile Include="Controllers\LearnMoreController.cs" />
     <Compile Include="Filters\AdminModAttribute.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Filters\ModeratorModAttribute.cs" />
@@ -339,6 +341,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Book.cs" />
+    <Compile Include="Models\Details.cs" />
+    <Compile Include="Models\LearnMore.cs" />
+    <Compile Include="Models\MailService.cs" />
+    <Compile Include="Models\SessionService.cs" />
+    <Compile Include="Models\ISession.cs" />
+    <Compile Include="Models\UserMessage.cs" />
+    <Compile Include="Models\Contacts.cs" />
     <Compile Include="Models\ProductData.cs" />
     <Compile Include="Models\UserData.cs" />
     <Compile Include="Models\UserLogin.cs" />
@@ -403,6 +412,8 @@
     <Content Include="Views\Signup\Index.cshtml" />
     <Content Include="Views\Book\Create.cshtml" />
     <Content Include="Views\Book\Edit.cshtml" />
+    <Content Include="Views\Contacts\index.cshtml" />
+    <Content Include="Views\LearnMore\index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
