@@ -28,7 +28,7 @@ namespace BookMall.Web.Controllers
             if (ModelState.IsValid)
             {
 
-                contacts.Subject = "Contact US :) ";
+                contacts.Subject = "Contact US ";
 
                 bool messageSent = MailService.SendMessage(contacts);
 

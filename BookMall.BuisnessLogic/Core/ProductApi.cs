@@ -88,7 +88,7 @@ namespace BookMall.BuisnessLogic.Core
 
         internal List<ProductData> GetProductListAction(int page)
         {
-            int onPage = 20;
+            int onPage = 6;
             List<ProductData> productData = new List<ProductData>();
             using (var db = new UserContext())
             {
