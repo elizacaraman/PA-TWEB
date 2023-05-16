@@ -76,13 +76,6 @@
                             @ViewBag.Username
                         </a>
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <h6 class="dropdown-header">
-                                Manage Profile
-                            </h6>
-
-                            <a class="dropdown-item" href="/profile">
-                                Personal Center
-                            </a>
 
                             <a class="dropdown-item" href="/settings">
                                 Settings
@@ -90,10 +83,6 @@
 
                             <a class="dropdown-item" href="/cart">
                                 Cart
-                            </a>
-
-                            <a class="dropdown-item" href="/library">
-                                My Library
                             </a>
 
                             @if (ViewBag.UserLevel == "Admin" || ViewBag.UserLevel == "Moderator")
