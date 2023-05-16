@@ -1,5 +1,6 @@
 USE [BookMall]
 GO
+
 select *from __MigrationHistory
 select *from PDbTables
 select *from UDbTables
@@ -8,10 +9,17 @@ UPDATE PDbTables
 SET Author='Meadow Murphy'
 WHERE Title='Kiss and Cry';
 
+DELETE FROM UDbTables WHERE Username ='Eliza Caraman';
+
+UPDATE UDbTables
+SET Level= 0 
+WHERE Username like'%Eliza Caraman%';
+
 
 UPDATE UDbTables
 SET Level= 0 
 WHERE Username like'%eliza%';
+
 
 SET IDENTITY_INSERT [dbo].[PDbTables] ON 
 GO
@@ -53,3 +61,5 @@ INSERT [dbo].[UDbTables] ([Id], [Username], [Password], [Email], [FirstLogin], [
 GO
 SET IDENTITY_INSERT [dbo].[UDbTables] OFF
 GO
+
+
