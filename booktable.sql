@@ -1,5 +1,18 @@
 USE [BookMall]
 GO
+select *from __MigrationHistory
+select *from PDbTables
+select *from UDbTables
+
+UPDATE PDbTables
+SET Author='Meadow Murphy'
+WHERE Title='Kiss and Cry';
+
+
+UPDATE UDbTables
+SET Level= 0 
+WHERE Username like'%eliza%';
+
 SET IDENTITY_INSERT [dbo].[PDbTables] ON 
 GO
 INSERT [dbo].[PDbTables] ([Id], [OwnerId], [Author], [Title], [Description], [Genre], [ImageUrl], [PdfFile], [Price], [Pages], [ISBN], [JpgFile], [PdfUrl]) VALUES (1, 1, N'Meadow Murphy', N'Kiss and Cry', NULL, N'Romantique', N'~/Content/Covers/3C66F948D67E0B0D386908E5A038F6E0.jpg', N'', 350, 168, N'9786064400642', N'', N'~/Content/Books/3C66F948D67E0B0D386908E5A038F6E0.pdf')
