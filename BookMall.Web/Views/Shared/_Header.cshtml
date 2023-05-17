@@ -28,26 +28,15 @@
             <div class="me-auto"></div>
             <ul class="navbar-nav my-2 my-lg-0">
 
-                @if (System.Web.HttpContext.Current.Session["ContactsStatus"] == "Contacts")
-                {
-                    <li class="">
-                        <a class="nav-link" href="/logout">
-                            <span class="sr-only">
-                                Log Out
-                            </span>
-                        </a>
-                    </li>
-                }
-                else
-                {
-                    <li class="">
-                        <a class="nav-link" href="/Contacts">
-                            <span class="sr-only">
-                                Contacts
-                            </span>
-                        </a>
-                    </li>
-                }
+
+                <li class="">
+                    <a class="nav-link" href="/Contacts">
+                        <span class="sr-only">
+                            Contacts
+                        </span>
+                    </a>
+                </li>
+
 
                 @if (System.Web.HttpContext.Current.Session["LoginStatus"] == "login")
                 {
