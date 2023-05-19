@@ -1,12 +1,12 @@
-#[Libraria online Book Mall]
+# Libraria online "Book Mall"
 
 
 **************************************************************************************************************
 
-##Crearea un site de comert electronic dedicat vânzării de cărți . 
+## Crearea un site de comert electronic dedicat vânzării de cărți . 
 
 **************************************************************************************************************
-
+<p align= "center">
 ![image](https://github.com/elizacaraman/PA-TWEB/assets/132936858/459ba503-2f93-4f35-b1e1-dcee758ee575)
 ![image](https://github.com/elizacaraman/PA-TWEB/assets/132936858/a997cb3c-e43d-4437-aefa-4f3340bdf889)
 ![image](https://github.com/elizacaraman/PA-TWEB/assets/132936858/60e20e3d-e22e-4358-bc11-c473bd659fa1)
@@ -19,52 +19,61 @@
 ![image](https://github.com/elizacaraman/PA-TWEB/assets/132936858/88fb1ec1-980e-4e13-9029-a41f4ee45729)
 ![image](https://github.com/elizacaraman/PA-TWEB/assets/132936858/05425859-67b2-4ed7-9d20-bead0fdbd47f)
 ![image](https://github.com/elizacaraman/PA-TWEB/assets/132936858/ac504bc5-fee3-4272-8835-1288bcbbc066)
+   
+   </p>
 
 ***************************************************************************************************************
 
-##Pentru a porni proiectul urmam urmatorii pasi:
+### Pentru a porni proiectul urmam urmatorii pasi:
 
 ***************************************************************************************************************
 
 -deschidem Visual Studio
 
+<p align= "center">
 ![image](https://github.com/elizacaraman/PA-TWEB/assets/132936858/4e144c9d-7a76-4338-a9bb-cda9b3ab327a)
+  </p>
 
 ****************************************************************************************************************
 
 -alegem optiunea "Open a local folder"
 
-![image](https://github.com/elizacaraman/PA-TWEB/assets/132936858/a062b084-009b-4c80-9f10-19886d80a4bd)
-
+<p align= "center">
+![image](https://github.com/elizacaraman/PA-TWEB/assets/132936858/a062b084-009b-4c80-9f10-19886d80a4bd) 
+</p>
 *****************************************************************************************************************
 
 -selectam proiectul nostru din locatia in care se afla
 
+<p align= "center">
 ![image](https://github.com/elizacaraman/PA-TWEB/assets/132936858/8f99ae2a-a60f-4366-98bd-fc0415318928)
+</p>
 
 ******************************************************************************************************************
 
 -selectam "BookMall.sln"
 
+<p align= "center">
 ![image](https://github.com/elizacaraman/PA-TWEB/assets/132936858/b882d578-e742-4a72-a174-105d805648b9)
-
+</p>
 *******************************************************************************************************************
 
 -dam la executie apasand butonul de compilare "IIS Express"
 
+<p align= "center">
 ![image](https://github.com/elizacaraman/PA-TWEB/assets/132936858/b5b388e5-a5d0-4032-8129-5b779e6fd162)
-
+</p>
 ********************************************************************************************************************
 
 
-###Asupra proiectului au contribuit:
+### Asupra proiectului au contribuit:
 
-Caraman Eliza;
+- Caraman Eliza
 
-Gavrilita Ion;
+- Gavrilita Ion
 
-Munjiu Denis;
+- Munjiu Denis
 
-Hirbu Eduard;
+- Hirbu Eduard
 
 
