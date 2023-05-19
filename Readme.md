@@ -1,9 +1,9 @@
-#Libraria online “Book Mall”
+#[Libraria online Book Mall]
 
 
 **************************************************************************************************************
 
-Crearea un site de comert electronic dedicat vânzării de cărți . 
+##Crearea un site de comert electronic dedicat vânzării de cărți . 
 
 **************************************************************************************************************
 
@@ -22,7 +22,7 @@ Crearea un site de comert electronic dedicat vânzării de cărți .
 
 ***************************************************************************************************************
 
-Pentru a porni proiectul urmam urmatorii pasi:
+##Pentru a porni proiectul urmam urmatorii pasi:
 
 ***************************************************************************************************************
 
@@ -57,7 +57,7 @@ Pentru a porni proiectul urmam urmatorii pasi:
 ********************************************************************************************************************
 
 
-Asupra proiectului au contribuit:
+###Asupra proiectului au contribuit:
 
 Caraman Eliza;
 
